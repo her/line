@@ -3,6 +3,7 @@
 " Version: 0.1.0
 " License: BSD-2-Clause
 
+set laststatus=2
 set statusline=
 set statusline+=%#Normal#                      " highlight
 set statusline+=%{mode()}                      " mode
