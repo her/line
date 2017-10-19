@@ -5,9 +5,9 @@
 
 set statusline=
 set statusline+=%#Normal#                      " highlight
-set statusline+=%{mode()}                      " mode
-set statusline+=\                              " space
-set statusline+=\|                             " seperator
+"set statusline+=%{mode()}                      " mode
+"set statusline+=\                              " space
+"set statusline+=\|                             " seperator
 set statusline+=\                              " 
 set statusline+=%{fugitive#head()}             " git
 set statusline+=\                              " 
