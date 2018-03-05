@@ -27,7 +27,15 @@ set statusline+=%{&readonly?'🔒\ ':''}
 set statusline+=%#LineNr#
 set statusline+=%=
 set statusline+=\ 
+
+" ASCII code
+set statusline+=\ (\%b
 set statusline+=\|
+" Byte code
+set statusline+=0x%B\)
+
+" Buffer number
+set statusline+=\ Buf:%n
 set statusline+=\ 
 
 " truncate/file_encoding
