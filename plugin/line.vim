@@ -10,7 +10,9 @@
 
 " space/git
 set statusline+=\ 
+set statusline+=%#Directory#
 set statusline+=%{fugitive#head()}
+set statusline+=%#Normal#
 
 " filename
 set statusline+=\ 
