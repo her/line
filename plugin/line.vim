@@ -24,6 +24,7 @@ set statusline+=%{&modified?'+\ ':''}
 set statusline+=%{&readonly?'🔒\ ':''}
 
 " left-right seperator
+set statusline+=%#LineNr#
 set statusline+=%=
 set statusline+=\ 
 set statusline+=\|
