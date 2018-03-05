@@ -3,8 +3,10 @@
 " Version: 0.2.0
 " License: BSD-2-Clause
 
-" highlight
-set statusline+=%#Normal#
+" highlight groups
+" %#Normal#
+" %#Directory#
+" %#LineNr#
 
 " space/git
 set statusline+=\ 
