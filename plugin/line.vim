@@ -39,7 +39,6 @@ set statusline+=\ Buf:%n
 set statusline+=\ 
 
 " truncate/file_encoding
-set statusline+=%<
 set statusline+=%{strlen(&fenc)?&fenc:''}
 
 " file_format
@@ -58,12 +57,16 @@ set statusline+=\|
 set statusline+=\ 
 set statusline+=%l:%c
 
-" percent through file / '%< truncate'
+" percent through file
 set statusline+=\ 
-set statusline+=%<%p%%
+set statusline+=%p%%
 
-" filepath/truncate '<'
 set statusline+=\ 
 set statusline+=\|
 set statusline+=\ 
+
+" '%<' truncate
+set statusline+=%<
+
+" filepath
 set statusline+=%f
