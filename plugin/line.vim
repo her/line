@@ -8,50 +8,55 @@
 " %#Directory#
 " %#LineNr#
 
+set fillchars=stl:―,stlnc:—,vert:│,fold:۰
 " space/git
 set statusline+=\ 
 set statusline+=%#Directory#
 set statusline+=%{fugitive#head()}
-set statusline+=%#Normal#
+set statusline+=%#LineNr#
+"set statusline+=%#Normal#
+
+" modified/read_only
+set statusline+=\ 
+set statusline+=%{&modified?'+':''}
+set statusline+=%{&readonly?'🔒\ ':''}
 
 " filename
 set statusline+=\ 
 set statusline+=[%t]
 
-" modified/read_only
-set statusline+=\ 
-set statusline+=%{&modified?'+\ ':''}
-set statusline+=%{&readonly?'🔒\ ':''}
 
 " left-right seperator
-set statusline+=%#LineNr#
 set statusline+=%=
-set statusline+=\ 
+"set statusline+=\ 
+
+" '%<' truncate
+set statusline+=%<
 
 " ASCII code
-set statusline+=\ (\%b
-set statusline+=\|
-" Byte code
-set statusline+=0x%B\)
+"set statusline+=\(\%b
+"set statusline+=\|
+"" Byte code
+"set statusline+=0x%B\)
 
 " Buffer number
-set statusline+=\ Buf:%n
-set statusline+=\ 
+set statusline+=\[Buf:%n]
+"set statusline+=\ 
 
 " truncate/file_encoding
-set statusline+=%{strlen(&fenc)?&fenc:''}
+"set statusline+=%{strlen(&fenc)?&fenc:''}
 
 " file_format
-set statusline+=\ 
-set statusline+=%{&ff}
+"set statusline+=\ 
+"set statusline+=%{&ff}
 
 " filetype
 set statusline+=\ 
 set statusline+=%Y
 
 " separator
-set statusline+=\ 
-set statusline+=\|
+"set statusline+=\ 
+"set statusline+=\|
 
 " line/column
 set statusline+=\ 
@@ -60,13 +65,12 @@ set statusline+=%l:%c
 " percent through file
 set statusline+=\ 
 set statusline+=%p%%
-
-set statusline+=\ 
-set statusline+=\|
 set statusline+=\ 
 
-" '%<' truncate
-set statusline+=%<
+"set statusline+=\ 
+"set statusline+=\|
+"set statusline+=\ 
 
-" filepath
-set statusline+=%f
+"" filepath
+"set statusline+=%f
+"set statusline+=\ 
